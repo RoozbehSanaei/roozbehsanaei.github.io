@@ -1,0 +1,273 @@
+html
+{
+  overflow-y: scroll;
+}
+
+a
+{
+  color: #C41E3A;
+}
+
+a:visited
+{
+  color: #808080;
+}
+
+@font-face {
+  font-family: 'Equity OT';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/webfonts/equity_ot_a_regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Equity OT';
+  font-style: italic;
+  font-weight: normal;
+  src: url(/webfonts/equity_ot_a_italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Equity OT';
+  font-style: normal;
+  font-weight: bold;
+  src: url(/webfonts/equity_ot_a_bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Equity OT';
+  font-style: italic;
+  font-weight: bold;
+  src: url(/webfonts/equity_ot_a_bold_italic.woff2) format('woff2');
+}
+
+body
+{
+  line-height: 1.5;
+
+  font-family: 'Equity OT', serif;
+  font-display: swap;
+  font-size: 1.25em;
+  max-width: 960px;
+
+  background: #F2F2F2;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  text-align: justify;
+}
+
+nav
+{
+  font-size: 1.00em;
+}
+
+#menu ul
+{
+  display:        flex;
+  flex-direction: row;
+  column-gap:     1rem;
+
+  row-gap:        0px;
+  margin:         0px;
+  padding:        0px;
+
+  list-style:     none; 
+}
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure that the portrait integrates nicely with the rest of the text */
+.portrait
+{
+  margin:         0px;
+  padding-top:    1em;
+  padding-bottom: 1em;
+}
+
+figure.portrait img
+{
+  border: 1px solid black;
+}
+
+figure.centred img
+{
+  margin-left:  auto;
+  margin-right: auto;
+  display:      block;
+}
+
+figure.button
+{
+  margin:  0px;
+  display: inline-block;
+}
+
+figure.logo
+{
+  display: inline-block;
+}
+
+figure.centred figcaption
+{
+  text-align: justify;
+  font-size:  1.0rem;
+}
+
+h1, h2, h3, h4, h5
+{
+  font-weight: normal;
+  font-variant: small-caps;
+  line-height: 1.2;
+}
+
+h1
+{
+  font-size: 2em;
+}
+
+h2
+{
+  font-size: 1.5em;
+}
+
+h3
+{
+  font-size: 1.17em;
+}
+
+h4, h5
+{
+  font-size: 1em;
+}
+
+h1.title
+{
+  margin-bottom: 0;
+}
+
+h2.tags
+{
+  margin-top: 0;
+  line-height: 1em;
+  font-variant: None;
+}
+
+pre, pre.chroma
+{
+  padding: 1em;
+  background-color: #F5F5F5;
+  border: 1px solid #E5E5E5;
+  overflow: auto;
+}
+
+header
+{
+  margin-bottom: 1em;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5em;
+}
+
+footer
+{
+  border-top: 1px solid black;
+  margin-top: 1em;
+  padding-top: 0.5em;
+}
+
+#tags
+{
+  margin-bottom: 10px;
+}
+
+.footnotes
+{
+  font-size: 0.75em;
+}
+
+#toc
+{
+  font-size: 1em;
+
+  display: block;
+
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: black;
+}
+
+header.toc
+{
+  border-bottom: none;
+  margin: 1em 0 1em 0;
+  padding: 0;
+}
+
+h1.toc
+{
+  padding: 0;
+  margin: 0;
+}
+
+sup, sub
+{
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+}
+
+blockquote
+{
+  border-left: 10px solid #E5E5E5;
+  padding-left: 0.5em;
+}
+
+/* Improve spacing between articles and normal lists */
+article, li
+{
+  margin: 0.50em 0 0 0;
+}
+
+/* Special handling for profile links on the main page. Since we are
+ * styling the list items above, this makes condensing them a little
+ * bit easier */
+.profiles li
+{
+  margin:          0;
+  list-style-type: none;
+}
+
+/* Render (nested) keyboard shortcuts in a document */
+kbd>kbd
+{
+  background-color: #F5F5F5;
+  padding:          2px 2px;
+  border:           1px solid #E5E5E5;
+  font-weight:      600;
+  white-space:      nowrap;
+
+  /* nice key shadow effect */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+}
+
+/* Special styling for publications */
+.publications
+{
+  text-align:  justify;
+}
+
+@media only screen and (max-width: 690px)
+{
+  #menu ul
+  {
+    flex-direction: column;
+  }
+}
