@@ -1,202 +1,144 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-
+<!-- saved from url=(0025)https://bastian.rieck.me/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roozbeh Sanaei</title>
+  <title>Bastian Grossenbacher Rieck</title>
+  
+  
 
-  <meta name="description" content="Personal homepage of Roozbeh Sanaei.">
+  <meta name="description" content="The personal homepage of Bastian Grossenbacher Rieck, professor of machine learning at the University of Fribourg in Switzerland.
+">
 
-  <!-- Keep MathJax (as requested) -->
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      "HTML-CSS": { scale: 100 },
-      tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        displayMath: [['$$','$$']],
-        processEscapes: true,
-        processEnvironments: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        TeX: {
-          equationNumbers: { autoNumber: "AMS" },
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
-        }
-      }
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML" async defer></script>
+  
+    <meta name="google-site-verification" content="zVNlcZlKte6_E_lbuEuo9X-KzIp-CdsI8V1SLfhhOfA">
+  
 
-  <!-- Minimal, self-contained styling (no external assets) -->
-  <style>
-    :root{
-      --bg:#ffffff;
-      --fg:#111111;
-      --muted:#555555;
-      --border:#e6e6e6;
-      --hover:#f6f6f6;
-      --maxw: 980px;
-      --menuw: 220px;
-    }
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bastian Grossenbacher Rieck">
+    <meta name="twitter:url" content="http://bastian.rieck.me/">
 
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-      color:var(--fg);
-      background:var(--bg);
-      line-height:1.55;
-    }
+    <meta name="twitter:description" content="The personal homepage of Bastian Grossenbacher Rieck, professor of machine learning at the University of Fribourg in Switzerland.
+">
+    <meta name="twitter:image" content="http://bastian.rieck.me/images/portrait_2024.jpg">
+    <meta name="twitter:image:alt" content="A recent portrait of me">
+    <meta name="twitter:creator" content="@Pseudomanifold">
+  
 
-    a{ color:var(--fg); text-decoration:underline; }
-    a:hover{ text-decoration-thickness:2px; }
+  <link rel="preload" as="style" href="./Bastian Grossenbacher Rieck_files/style.css">
+  <link rel="preload" as="style" href="./Bastian Grossenbacher Rieck_files/syntax.css">
+  <link rel="preload" as="style" href="./Bastian Grossenbacher Rieck_files/fontawesome.min.css">
+  <link rel="preload" as="style" href="./Bastian Grossenbacher Rieck_files/academicons.min.css">
 
-    header{
-      border-bottom: 1px solid var(--border);
-      padding: 18px 0;
-      margin-bottom: 18px;
-    }
+  <link rel="stylesheet" href="./Bastian Grossenbacher Rieck_files/style.css">
+  <link rel="stylesheet" href="./Bastian Grossenbacher Rieck_files/syntax.css">
+  <link rel="stylesheet" href="./Bastian Grossenbacher Rieck_files/fontawesome.min.css">
+  <link rel="stylesheet" href="./Bastian Grossenbacher Rieck_files/academicons.min.css">
 
-    .page{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 18px 32px;
-      display: grid;
-      grid-template-columns: var(--menuw) 1fr;
-      gap: 24px;
-    }
+  
 
-    /* Top nav (same logical items as original) */
-    #menu ul{
-      list-style:none;
-      margin:0;
-      padding:0;
-      border: 1px solid var(--border);
-      background:#fff;
-      padding: 10px;
-      position: sticky;
-      top: 18px;
-      align-self: start;
-      display: grid;
-      gap: 6px;
-    }
-    #menu a{
-      display:block;
-      padding: 8px 10px;
-      text-decoration:none;
-      border: 1px solid transparent;
-    }
-    #menu a:hover{
-      background: var(--hover);
-      border-color: var(--border);
-    }
+  <meta name="generator" content="Hugo 0.152.2">
 
-    main{ min-width:0; }
+  <script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+  "HTML-CSS": { scale: 100},
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+</script>
 
-    h1.title{
-      margin: 0 0 14px;
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: .2px;
-    }
+<script src="./Bastian Grossenbacher Rieck_files/MathJax.js.download" async="" defer="">
+</script>
 
-    .hero{
-      display:flex;
-      flex-direction: row;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
 
-    figure.portrait{
-      margin:0;
-      width: 180px;
-      aspect-ratio: 1 / 1;
-      border: 1px solid var(--border);
-      background: #fafafa;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    figure.portrait img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-    }
-    .portrait-placeholder{
-      color: var(--muted);
-      font-size: 13px;
-      text-align:center;
-      padding: 10px;
-    }
-
-    ul.profiles{
-      margin: 0;
-      padding-left: 18px;
-    }
-    ul.profiles li{ margin: 6px 0; }
-
-    @media (max-width: 820px){
-      .page{ grid-template-columns: 1fr; }
-      #menu ul{ position: relative; top: 0; }
-      figure.portrait{ width: 160px; }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div style="max-width:980px;margin:0 auto;padding:0 18px;">
-      <!-- Optional simple header line; remove if you want it blank -->
-      <span style="color:var(--muted);">Personal homepage</span>
-    </div>
-  </header>
-
-  <div class="page">
-    <nav id="menu" aria-label="Primary">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#group">Group</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-
-    <main id="home">
-      <article>
-        <h1 class="title">hello world</h1>
-
-        <div class="hero">
-          <div style="width:auto;">
-            <figure class="portrait">
-              <!-- Replace with your own image -->
-              <!-- <img src="./images/portrait.jpg" alt="A recent portrait of me" width="180" height="180"> -->
-              <div class="portrait-placeholder">Portrait placeholder<br>./images/portrait.jpg</div>
-            </figure>
-          </div>
-
-          <div style="width:auto; align-self:stretch; display:flex; align-items:center;">
-            <ul class="profiles">
-              <li><a href="./cv.pdf">Academic curriculum vitæ</a></li>
-              <li><a href="https://orcid.org/YOUR-ORCID">YOUR-ORCID</a></li>
-              <li><a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></li>
-              <li><a href="https://github.com/YOUR_GITHUB">GitHub</a></li>
-              <li><a href="https://x.com/YOUR_HANDLE">X (Twitter)</a></li>
-              <li><a href="https://www.youtube.com/@YOUR_CHANNEL">YouTube</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p>
-          hello world
-          <!-- keep only up to this point, as requested -->
-        </p>
-      </article>
-    </main>
-  </div>
-</body>
-</html>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {p
