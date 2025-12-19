@@ -14,44 +14,58 @@ a:visited
 {
   color: #808080;
 }
-  
-@font-face {
+
+/* ET Book fonts (served from /fonts) */
+@font-face{
   font-family: "et-book";
-  src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
-       url("/fonts/et-book-roman-line-figures.woff")  format("woff");
+  src: url("/fonts/et-book-roman-line-figures.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/et-book-roman-line-figures.woff") format("woff"),
+       url("/fonts/et-book-roman-line-figures.ttf")  format("truetype"),
+       url("/fonts/et-book-roman-line-figures.svg#et-book") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
+@font-face{
   font-family: "et-book";
-  src: url("/fonts/et-book-display-italic-old-style-figures.woff2") format("woff2"),
-       url("/fonts/et-book-display-italic-old-style-figures.woff")  format("woff");
+  src: url("/fonts/et-book-display-italic-old-style-figures.eot");
+  src: url("/fonts/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/et-book-display-italic-old-style-figures.woff") format("woff"),
+       url("/fonts/et-book-display-italic-old-style-figures.ttf")  format("truetype"),
+       url("/fonts/et-book-display-italic-old-style-figures.svg#et-book") format("svg");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
-@font-face {
+@font-face{
   font-family: "et-book";
-  src: url("/fonts/et-book-bold-line-figures.woff2") format("woff2"),
-       url("/fonts/et-book-bold-line-figures.woff")  format("woff");
+  src: url("/fonts/et-book-bold-line-figures.eot");
+  src: url("/fonts/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/et-book-bold-line-figures.woff") format("woff"),
+       url("/fonts/et-book-bold-line-figures.ttf")  format("truetype"),
+       url("/fonts/et-book-bold-line-figures.svg#et-book") format("svg");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Optional (if you have it): “semi-bold” */
-@font-face {
+/* Semi-bold (you have this file; map it to weight 600) */
+@font-face{
   font-family: "et-book";
-  src: url("/fonts/et-book-semi-bold-old-style-figures.woff2") format("woff2"),
-       url("/fonts/et-book-semi-bold-old-style-figures.woff")  format("woff");
+  src: url("/fonts/et-book-semi-bold-old-style-figures.eot");
+  src: url("/fonts/et-book-semi-bold-old-style-figures.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/et-book-semi-bold-old-style-figures.woff") format("woff"),
+       url("/fonts/et-book-semi-bold-old-style-figures.ttf")  format("truetype"),
+       url("/fonts/et-book-semi-bold-old-style-figures.svg#et-book") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
+  
 body
 {
   line-height: 1.5;
