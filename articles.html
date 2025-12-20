@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles – Roozbeh Sanaei</title>
+
+  <style>
+    /* ---------- Base ---------- */
+    html { overflow-y: scroll; }
+    * { box-sizing: border-box; }
+
+    :root{
+      --page-max: 960px;
+      --page-bg: #F2F2F2;
+      --ink: #111;
+      --link: #C41E3A;
+      --visited: #808080;
+      --rule: #111;
+    }
+
+    a { color: var(--link); }
+    a:visited { color: var(--visited); }
+
+    /* ---------- ET Book ---------- */
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
+           url("/fonts/et-book-roman-line-figures.woff")  format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-display-italic-old-style-figures.woff2") format("woff2"),
+           url("/fonts/et-book-display-italic-old-style-figures.woff")  format("woff");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-bold-line-figures.woff2") format("woff2"),
+           url("/fonts/et-book-bold-line-figures.woff")  format("woff");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body{
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--ink);
+      font-family: "et-book", serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .page{
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 12px 10px 24px;
+    }
+
+    header.site-header{
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    footer.site-footer{
+      border-top: 1px solid var(--rule);
+      margin-top: 22px;
+      padding-top: 10px;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav#menu{ font-size: 1rem; }
+
+    #menu ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      align-items: center;
+    }
+
+    #menu li{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+    }
+
+    #menu a{
+      text-decoration: none;
+    }
+
+    /* ---------- Typography ---------- */
+    h1, h2{
+      font-weight: 400;
+      font-variant: small-caps;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    h1{
+      font-size: 2rem;
+      margin: 0.2em 0 0.6em;
+    }
+
+    h2{
+      font-size: 1.4rem;
+      margin: 1.2em 0 0.6em;
+    }
+
+    p{
+      margin: 0.75em 0;
+    }
+
+    /* ---------- Article list ---------- */
+    ul.articles{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.articles li{
+      margin: 0.6em 0;
+    }
+
+    ul.articles a{
+      text-decoration: none;
+    }
+
+    ul.articles a:hover{
+      text-decoration: underline;
+    }
+
+    /* ---------- Small screens ---------- */
+    @media (max-width: 690px){
+      body{ font-size: 1.1rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="site-header">
+      <nav id="menu" aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="https://aidos.group">Group</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/talks/">Talks</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>Articles</h1>
+
+        <p>
+          Selected essays, technical notes, and longer-form writing.
+        </p>
+
+        <ul class="articles">
+          <li>
+            <a href="/articles/enterprise-search-gaps/">
+              What’s missing in enterprise search for engineering organizations
+            </a>
+          </li>
+          <li>
+            <a href="/articles/et-jekyll-notes/">
+              Notes on ET-Jekyll, Tufte-style layouts, and typography
+            </a>
+          </li>
+          <li>
+            <a href="/articles/cpp-integers-overview/">
+              Integers in C++: a concept-level overview
+            </a>
+          </li>
+          <li>
+            <a href="/articles/structs-in-c/">
+              Structs in C: a systematic, example-driven treatment
+            </a>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>&nbsp;</div>
+    </footer>
+
+  </div>
+</body>
+</html>
