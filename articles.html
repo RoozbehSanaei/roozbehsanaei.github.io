@@ -21,8 +21,9 @@
 
     a { color: var(--link); }
     a:visited { color: var(--visited); }
+    a:hover { text-decoration: underline; }
 
-    /* ---------- ET Book ---------- */
+    /* ---------- ET Book (served from /fonts) ---------- */
     @font-face{
       font-family: "et-book";
       src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
@@ -50,6 +51,15 @@
       font-display: swap;
     }
 
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-semi-bold-old-style-figures.woff2") format("woff2"),
+           url("/fonts/et-book-semi-bold-old-style-figures.woff")  format("woff");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
     body{
       margin: 0;
       background: var(--page-bg);
@@ -66,19 +76,13 @@
       padding: 12px 10px 24px;
     }
 
+    /* ---------- Header / Nav ---------- */
     header.site-header{
       border-bottom: 1px solid var(--rule);
       padding-bottom: 10px;
-      margin-bottom: 18px;
+      margin-bottom: 18px; /* menu stays where it is */
     }
 
-    footer.site-footer{
-      border-top: 1px solid var(--rule);
-      margin-top: 22px;
-      padding-top: 10px;
-    }
-
-    /* ---------- Navigation ---------- */
     nav#menu{ font-size: 1rem; }
 
     #menu ul{
@@ -86,7 +90,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: wrap;          /* stays horizontal, wraps on small screens */
       gap: 14px 18px;
       align-items: center;
     }
@@ -102,6 +106,11 @@
       text-decoration: none;
     }
 
+    /* ---------- Main spacing: pushes “Articles” lower ---------- */
+    main{
+      padding-top: 28px; /* adjust to move header lower */
+    }
+
     /* ---------- Typography ---------- */
     h1, h2{
       font-weight: 400;
@@ -112,12 +121,7 @@
 
     h1{
       font-size: 2rem;
-      margin: 0.2em 0 0.6em;
-    }
-
-    h2{
-      font-size: 1.4rem;
-      margin: 1.2em 0 0.6em;
+      margin: 0 0 0.6em;
     }
 
     p{
@@ -132,27 +136,26 @@
     }
 
     ul.articles li{
-      margin: 0.6em 0;
+      margin: 0.6em 0 0;
     }
 
-    ul.articles a{
-      text-decoration: none;
-    }
-
-    ul.articles a:hover{
-      text-decoration: underline;
+    /* ---------- Footer ---------- */
+    footer.site-footer{
+      border-top: 1px solid var(--rule);
+      margin-top: 22px;
+      padding-top: 10px;
     }
 
     /* ---------- Small screens ---------- */
     @media (max-width: 690px){
       body{ font-size: 1.1rem; }
+      main{ padding-top: 20px; }
     }
   </style>
 </head>
 
 <body>
   <div class="page">
-
     <header class="site-header">
       <nav id="menu" aria-label="Primary navigation">
         <ul>
@@ -170,31 +173,13 @@
       <article>
         <h1>Articles</h1>
 
-        <p>
-          Selected essays, technical notes, and longer-form writing.
-        </p>
+        <p>Selected essays, technical notes, and longer-form writing.</p>
 
         <ul class="articles">
-          <li>
-            <a href="/articles/enterprise-search-gaps/">
-              What’s missing in enterprise search for engineering organizations
-            </a>
-          </li>
-          <li>
-            <a href="/articles/et-jekyll-notes/">
-              Notes on ET-Jekyll, Tufte-style layouts, and typography
-            </a>
-          </li>
-          <li>
-            <a href="/articles/cpp-integers-overview/">
-              Integers in C++: a concept-level overview
-            </a>
-          </li>
-          <li>
-            <a href="/articles/structs-in-c/">
-              Structs in C: a systematic, example-driven treatment
-            </a>
-          </li>
+          <li><a href="/articles/enterprise-search-gaps/">What’s missing in enterprise search for engineering organizations</a></li>
+          <li><a href="/articles/et-jekyll-notes/">Notes on ET-Jekyll, Tufte-style layouts, and typography</a></li>
+          <li><a href="/articles/cpp-integers-overview/">Integers in C++: a concept-level overview</a></li>
+          <li><a href="/articles/structs-in-c/">Structs in C: a systematic, example-driven treatment</a></li>
         </ul>
       </article>
     </main>
@@ -202,7 +187,6 @@
     <footer class="site-footer">
       <div>&nbsp;</div>
     </footer>
-
   </div>
 </body>
 </html>
