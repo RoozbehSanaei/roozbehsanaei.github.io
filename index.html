@@ -1,231 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roozbeh Sanaei</title>
-  <style>
-    /* ---------- Base ---------- */
-    html { overflow-y: scroll; }
-    * { box-sizing: border-box; }
 
-    :root{
-      --page-max: 960px;
-      --page-bg: #F2F2F2;
-      --ink: #111;
-      --link: #C41E3A;
-      --visited: #808080;
-      --rule: #111;
-      --gap: 16px;
-    }
+    <p class="lede">
+      System integrator (PhD from an MIT affiliated Lab) with extensive experience in designing and optimizing
+      resource restricted cloud and embedded platforms, involving substantial use of machine learning and
+      mathematical modelling to capture physical-world behaviour and dynamics. Skilled in performance engineering,
+      scalable architectures, and lifecycle management.
+    </p>
 
-    a { color: var(--link); }
-    a:visited { color: var(--visited); }
 
-    /* ---------- ET Book (served from /fonts) ---------- */
-    /* Assumes files exist directly under /fonts. If your site is a GitHub Pages *project* site,
-       change "/fonts/..." to "fonts/..." (relative paths). */
-    @font-face{
-      font-family: "et-book";
-      src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
-           url("/fonts/et-book-roman-line-figures.woff")  format("woff");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face{
-      font-family: "et-book";
-      src: url("/fonts/et-book-display-italic-old-style-figures.woff2") format("woff2"),
-           url("/fonts/et-book-display-italic-old-style-figures.woff")  format("woff");
-      font-weight: 400;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    @font-face{
-      font-family: "et-book";
-      src: url("/fonts/et-book-bold-line-figures.woff2") format("woff2"),
-           url("/fonts/et-book-bold-line-figures.woff")  format("woff");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face{
-      font-family: "et-book";
-      src: url("/fonts/et-book-semi-bold-old-style-figures.woff2") format("woff2"),
-           url("/fonts/et-book-semi-bold-old-style-figures.woff")  format("woff");
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    body{
-      margin: 0;
-      background: var(--page-bg);
-      color: var(--ink);
-      font-family: "et-book", serif;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      text-align: justify;
-    }
-
-    .page{
-      max-width: var(--page-max);
-      margin: 0 auto;
-      padding: 12px 10px 24px;
-    }
-
-    header.site-header{
-      border-bottom: 1px solid var(--rule);
-      padding: 0 0 10px;
-      margin: 0 0 18px;
-    }
-
-    footer.site-footer{
-      border-top: 1px solid var(--rule);
-      margin-top: 22px;
-      padding-top: 10px;
-    }
-
-    /* ---------- Nav ---------- */
-    nav#menu { font-size: 1rem; }
-
-    #menu ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;          /* stays horizontal; wraps on small screens */
-      gap: 14px 18px;
-      align-items: center;
-    }
-
-    #menu li{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-    }
-
-    #menu a{
-      text-decoration: none;
-    }
-
-    /* Optional: if icons are not showing, hide them cleanly instead of leaving empty space */
-    #menu i{ display: inline-block; }
-
-    /* ---------- Typography ---------- */
-    h1, h2, h3, h4, h5{
-      font-weight: 400;
-      font-variant: small-caps;
-      line-height: 1.2;
-      margin: 0.8em 0 0.25em;
-      text-align: left;
-    }
-
-    h1{ font-size: 2rem; }
-    h2{ font-size: 1.5rem; }
-    h3{ font-size: 1.17rem; }
-    h4, h5{ font-size: 1rem; }
-
-    h1.title{
-      margin-top: 0.2em;
-      margin-bottom: 0.6em;
-    }
-
-    p{ margin: 0.75em 0; }
-
-    /* ---------- Layout blocks ---------- */
-    .hero{
-      display: flex;
-      gap: var(--gap);
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    figure.portrait{
-      margin: 0;
-      padding: 0.6em 0;
-    }
-
-    figure.portrait img{
-      border: 1px solid #000;
-      max-width: 180px;
-      height: auto;
-      display: block;
-    }
-
-    .profiles{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .profiles li{
-      margin: 0.25em 0 0;
-      list-style-type: none;
-    }
-
-    /* ---------- Code blocks (your existing styles) ---------- */
-    pre, pre.chroma{
-      padding: 1em;
-      background-color: #F5F5F5;
-      border: 1px solid #E5E5E5;
-      overflow: auto;
-      text-align: left;
-    }
-
-    /* Chroma minimal (keep your long chroma rules if needed) */
-    .chroma { background-color: #ffffff; }
-
-    /* ---------- Small screens ---------- */
-    @media (max-width: 690px){
-      body{ font-size: 1.1rem; }
-      .hero{ gap: 12px; }
-      figure.portrait img{ max-width: 160px; }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page">
-    <header class="site-header">
-      <nav id="menu" aria-label="Primary navigation">
-        <ul>
-          <li><span><i class="fa-svg fa-home" aria-hidden="true"></i></span><a href="/">Home</a></li>
-          <li><span><i class="fa-svg fa-book" aria-hidden="true"></i></span><a href="cpp.html">C/C++</a></li>
-          <li><span><i class="fa-svg fa-pencil-alt" aria-hidden="true"></i></span><a href="/blog/">System Design</a></li>
-          <li><span><i class="fa-svg fa-comments" aria-hidden="true"></i></span><a href="/talks/">Machine Learning</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <article>
-        <h1 class="title">Roozbeh Sanaei</h1>
-
-        <section class="hero">
-          <figure class="portrait">
-            <picture>
-              <source srcset="https://i.ibb.co/xK65Hp7N/RZB1.jpg" type="image/jpeg">
-              <img src="https://i.ibb.co/xK65Hp7N/RZB1.jpg" alt="Roozbeh Sanaei portrait" loading="lazy">
-            </picture>
-          </figure>
-
-          <div>
-            <ul class="profiles">
-              <li><a href="https://www.linkedin.com/in/roozbeh-sanaei/">Roozbeh Sanaei @ LinkedIn</a></li>
-              <li><a href="https://scholar.google.com/citations?hl=en&user=QIS5MbYAAAAJ">Google Scholar</a></li>
-              <li><a href="https://github.com/RoozbehSanaei">Roozbeh Sanaei @ GitHub</a></li>
-              <li><a href="https://x.com/Roozbeh_Sanaei2">Roozbeh Sanaei @ X</a></li>
-              <li><a href="https://www.youtube.com/c/RoozbehSanaei">Roozbeh Sanaei @ YouTube</a></li>
-            </ul>
-          </div>
-        </section>
-
-        
     <p class="lede">
       System integrator (PhD from an MIT affiliated Lab) with extensive experience in designing and optimizing
       resource restricted cloud and embedded platforms, involving substantial use of machine learning and
@@ -236,111 +17,103 @@
     <div class="section">
       <h2>Overview</h2>
       <p>
-        My work sits at the boundary of real-world sensing/actuation and production software, spanning embedded targets
-        and cloud backends, where deterministic timing, measurable latency/throughput, and failure-safe behavior are
-        first-order requirements. I build end-to-end systems—from low-level interfacing and drivers up through multi-stage
-        perception and optimization pipelines—primarily in C/C++ and Python, with practical build/deployment stacks for
-        constrained targets and integration pathways that support scalable operation.
+        My work spans embedded targets and cloud backends, with a consistent focus on production-grade delivery under
+        real-world constraints: deterministic timing, measurable latency and throughput, robustness, and maintainability.
+        I build complete systems from low-level interfacing and runtime integration through ML-enabled perception and
+        optimization pipelines, primarily in C/C++ and Python, and I take responsibility for performance, reliability,
+        and lifecycle considerations across development, validation, and deployment.
       </p>
     </div>
 
     <div class="section">
-      <h2>Embedded perception and real-time delivery</h2>
+      <h2>Embedded systems engineering</h2>
       <p>
-        In production embedded environments, I have architected and integrated QNX-based pipelines that fuse multi-modal
-        camera streams to detect anomalous activities and unattended objects, while meeting strict real-time constraints.
-        I have redesigned and optimized 3D perception stacks—object detection, pose estimation, and reconstruction—for
-        resource-constrained deployment, including systematic tuning and evaluation with strong measured outcomes across
-        detection and recognition tasks. A key part of my delivery has been building the “last mile” integration that makes
-        these systems reliable: synchronized acquisition, predictable processing, and robust runtime behavior under embedded
-        constraints.
+        I develop and integrate embedded software stacks where hardware constraints, real-time behavior, and field
+        reliability are central. This includes platform-level work on real-time operating environments and the engineering
+        needed to translate requirements into stable software interfaces, along with application-level pipelines that must
+        remain deterministic under load. I have built low-level interfacing and synchronization for timing-sensitive
+        acquisition and IO, and I routinely design multithreaded pipelines with careful synchronization, memory ownership,
+        and buffering strategies so that latency and jitter stay within specification. Across these systems, I apply
+        performance engineering end-to-end—profiling, bottleneck isolation, vectorization, priority tuning, and runtime
+        stability work—and validate behavior through hands-on bring-up and debugging using in-circuit and lab instrumentation
+        such as JTAG and logic analyzers.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Embedded perception and real-time ML pipelines</h2>
+      <p>
+        I build real-time perception pipelines for resource-constrained systems with an emphasis on measurable accuracy,
+        predictable runtime behavior, and reliable integration into production constraints. My experience includes
+        multi-modal camera pipeline integration with end-to-end timing control, as well as compute-intensive perception
+        workloads such as object detection, pose estimation, reconstruction, and segmentation when appropriate to the
+        product requirements. I integrate compact ML components using embedded runtimes such as TFLite and TVM and benchmark
+        compute paths against optimized math and acceleration libraries to identify the best accuracy–latency tradeoffs.
+        This work is supported by systematic evaluation and tuning practices that prioritize operational metrics—accuracy,
+        latency, stability under load, and behavior under degraded inputs—so models and pipelines behave reliably outside
+        of ideal lab conditions.
       </p>
     </div>
 
     <div class="section">
       <h2>Machine learning, modelling, and optimization</h2>
       <p>
-        For industrial reliability and operational optimization, I have deployed, adapted, and fine-tuned anomaly detection
-        approaches (including Isolation Forest, Autoencoders, Outlier Exposure, Deep SVDD, and LoOP), paired with comparative
-        evaluation for robustness and performance. I have also designed and benchmarked a hybrid model predictive control (MPC)
-        framework that combines first-principles dynamics with data-driven components to improve prediction fidelity and control
-        responsiveness. On the systems side, I routinely drive performance engineering (multithreading, vectorization, priority
-        tuning, buffer management, and low-level configuration).
+        I apply machine learning and mathematical modelling to capture physical-world behavior and improve decision-making
+        in operational systems, with a strong emphasis on reliability and comparative evaluation. I have deployed and refined
+        anomaly detection approaches across classical and deep methods, including Isolation Forest, Autoencoders, Deep SVDD,
+        and LoOP, and I structure evaluation to surface robustness issues early (distribution shift, operational noise, and
+        system-level confounders). I also design hybrid modelling approaches that combine first-principles dynamics with
+        data-driven components, and I have developed model predictive control (MPC) frameworks that improve prediction fidelity
+        and control responsiveness in constrained settings. Throughout, I prioritize clarity of assumptions, measurable error
+        modes, and the operational tradeoffs required for deployment.
       </p>
     </div>
 
     <div class="section">
       <h2>Cloud and fleet-scale integration</h2>
       <p>
-        I have delivered device-to-cloud and inter-device integration paths that support monitoring, data flow, and operational
-        feedback loops, including CAN- and MQTT-based communication patterns where appropriate. My focus is on building reliable,
-        observable interfaces between embedded systems and higher-level services, with attention to robustness, diagnostics, and
-        lifecycle needs (deployment, updates, and validation). I validate integration and performance through hands-on debugging and
-        instrumentation, including in-circuit tools when required.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Resource-constrained compute and deployment</h2>
-      <p>
-        I have deep experience building resource-aware real-time signal-processing and vision workloads in embedded C++, where
-        correctness and determinism must hold under tight compute and memory limits. This includes real-time scheduling,
-        multithreading, synchronization, and memory management for deterministic behavior; efficient 3D reconstruction and
-        segmentation pipelines; and compact model integration using embedded runtimes such as TFLite/TVM, supported by benchmarking
-        against optimized math and acceleration libraries.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Systems architecture and integration</h2>
-      <p>
-        My research foundation was developed in an MIT–SUTD lab environment, where I worked on component specification and
-        system/software architecture in multi-team settings, with an emphasis on turning complex prototypes into cohesive systems.
-        In that context, I built robust GPS protocol handling (e.g., NMEA/3GPP/UBP) and designed ROS nodes to integrate sensing,
-        actuation, and control with efficient inter-node communication—skills that translate directly to modern embedded integration work.
+        I build the connective tissue between embedded systems and scalable services, enabling monitoring, data pipelines,
+        operational feedback loops, and observability. This includes device-to-cloud and inter-device communication patterns
+        (including CAN- and MQTT-based approaches where appropriate), and the engineering discipline needed to keep interfaces
+        robust in the field through diagnostics, telemetry, and fault visibility. I have also worked on scalable data ingestion
+        and processing workflows, including large-scale ingestion and service-side evaluation loops that support continuous
+        model and system improvement. My focus in cloud integration is to ensure that embedded constraints are reflected in
+        service design, and that lifecycle needs—deployment readiness, updates, validation gates, and long-term maintainability—
+        are treated as first-class engineering requirements.
       </p>
     </div>
 
     <div class="section">
       <h2>Applied R&amp;D across domains</h2>
       <p>
-        Beyond core embedded delivery, I have built ML-forward systems that still demand “embedded-grade” discipline. Examples include
-        embedded control software for additive manufacturing (G-code interpretation, motion/thermal control, and sensor interfacing)
-        combined with ML-based parameter optimization, defect detection and correction, and maintenance forecasting; and portable medical
-        imaging systems involving firmware for RF subsystems, synchronized real-time acquisition/buffering, and reconstruction algorithms
-        optimized for computational efficiency. I have also delivered scalable neural retrieval and ranking pipelines (Spark + MongoDB ingestion,
-        neural-symbolic retrieval, learn-to-rank evaluation with MAP/NDCG/Precision/MRR/latency) and clustering-based visualization for practical
-        search workflows.
+        I have delivered cross-domain systems that require both embedded discipline and ML/optimization depth, typically involving
+        tight coupling between hardware realities, algorithmic choices, and deployment constraints. This includes embedded control and
+        optimization pipelines in advanced manufacturing contexts, where parameter tuning, defect detection and correction, and
+        maintenance forecasting are integrated into operational loops. It also includes portable medical imaging firmware and data
+        pipelines, where synchronized acquisition and buffering must align with computationally efficient reconstruction methods.
+        In addition, I have built large-scale retrieval and ranking systems with rigorous evaluation using metrics such as MAP, NDCG,
+        Precision, MRR, and latency, complemented by clustering-based analysis workflows that improve interpretability and system tuning.
       </p>
     </div>
 
     <div class="section">
       <h2>Imaging and embedded control foundations</h2>
       <p>
-        Earlier in my career, I worked extensively on embedded imaging and microscopy systems, implementing real-time enhancement and
-        reconstruction methods (deblurring/denoising/resolution improvement) in C++ on embedded devices, and building embedded vision features
-        such as auto-focus, Z-stacking, stitching, segmentation, and spectral unmixing. This work was grounded in hardware-validated delivery—
-        oscilloscope/logic-analyzer/JTAG debugging—and extended into embedded control software for sensor parameters, laser modulation, calibration
-        routines, encoder integration, and closed-loop motor positioning.
+        Earlier work established strong fundamentals in real-time imaging pipelines and embedded control, combining algorithmic
+        implementation with hardware-validated testing and instrumentation. I implemented enhancement and reconstruction methods
+        such as deblurring, denoising, and resolution improvement in embedded C++ environments, and I developed practical imaging
+        features including auto-focus, Z-stacking, stitching, segmentation, and spectral unmixing. This work also covered the embedded
+        control software needed for stable operation—sensor parameter control, modulation, calibration routines, encoder integration,
+        and closed-loop positioning—validated through detailed lab bring-up and debugging practices.
       </p>
     </div>
 
     <div class="section">
       <h2>Ongoing research collaboration</h2>
       <p class="muted">
-        Alongside industry delivery, I continue technical-lead-level academic collaboration on system design and architecture using modern
-        optimization and learning approaches, including graph neural networks and deep reinforcement learning (e.g., A3C), as well as
-        dimensionality reduction and graph clustering methods used for system modularization.
+        Alongside industry delivery, I continue technical-lead-level collaboration on system design and architecture using modern
+        optimization and learning approaches, including graph neural networks, deep reinforcement learning (e.g., A3C), and
+        clustering-based methods used for modularization and product architecture.
       </p>
     </div>
-
-        
-      </article>
-    </main>
-
-    <footer class="site-footer">
-      <div>&nbsp;</div>
-    </footer>
-  </div>
-</body>
-</html>
+  </main>
