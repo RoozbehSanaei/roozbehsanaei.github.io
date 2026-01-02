@@ -1,10 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roozbeh Sanaei</title>
+  <style>
+    /* ---------- Base ---------- */
+    html { overflow-y: scroll; }
+    * { box-sizing: border-box; }
 
-    <p class="lede">
-      System integrator (PhD from an MIT affiliated Lab) with extensive experience in designing and optimizing
-      resource restricted cloud and embedded platforms, involving substantial use of machine learning and
-      mathematical modelling to capture physical-world behaviour and dynamics. Skilled in performance engineering,
-      scalable architectures, and lifecycle management.
-    </p>
+    :root{
+      --page-max: 960px;
+      --page-bg: #F2F2F2;
+      --ink: #111;
+      --link: #C41E3A;
+      --visited: #808080;
+      --rule: #111;
+      --gap: 16px;
+    }
+
+    a { color: var(--link); }
+    a:visited { color: var(--visited); }
+
+    /* ---------- ET Book (served from /fonts) ---------- */
+    /* Assumes files exist directly under /fonts. If your site is a GitHub Pages *project* site,
+       change "/fonts/..." to "fonts/..." (relative paths). */
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
+           url("/fonts/et-book-roman-line-figures.woff")  format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-display-italic-old-style-figures.woff2") format("woff2"),
+           url("/fonts/et-book-display-italic-old-style-figures.woff")  format("woff");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-bold-line-figures.woff2") format("woff2"),
+           url("/fonts/et-book-bold-line-figures.woff")  format("woff");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face{
+      font-family: "et-book";
+      src: url("/fonts/et-book-semi-bold-old-style-figures.woff2") format("woff2"),
+           url("/fonts/et-book-semi-bold-old-style-figures.woff")  format("woff");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body{
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--ink);
+      font-family: "et-book", serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .page{
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 12px 10px 24px;
+    }
+
+    header.site-header{
+      border-bottom: 1px solid var(--rule);
+      padding: 0 0 10px;
+      margin: 0 0 18px;
+    }
+
+    footer.site-footer{
+      border-top: 1px solid var(--rule);
+      margin-top: 22px;
+      padding-top: 10px;
+    }
+
+    /* ---------- Nav ---------- */
+    nav#menu { font-size: 1rem; }
+
+    #menu ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;          /* stays horizontal; wraps on small screens */
+      gap: 14px 18px;
+      align-items: center;
+    }
+
+    #menu li{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+    }
+
+    #menu a{
+      text-decoration: none;
+    }
+
+    /* Optional: if icons are not showing, hide them cleanly instead of leaving empty space */
+    #menu i{ display: inline-block; }
+
+    /* ---------- Typography ---------- */
+    h1, h2, h3, h4, h5{
+      font-weight: 400;
+      font-variant: small-caps;
+      line-height: 1.2;
+      margin: 0.8em 0 0.25em;
+      text-align: left;
+    }
+
+    h1{ font-size: 2rem; }
+    h2{ font-size: 1.5rem; }
+    h3{ font-size: 1.17rem; }
+    h4, h5{ font-size: 1rem; }
+
+    h1.title{
+      margin-top: 0.2em;
+      margin-bottom: 0.6em;
+    }
+
+    p{ margin: 0.75em 0; }
+
+    /* ---------- Layout blocks ---------- */
+    .hero{
+      display: flex;
+      gap: var(--gap);
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    figure.portrait{
+      margin: 0;
+      padding: 0.6em 0;
+    }
+
+    figure.portrait img{
+      border: 1px solid #000;
+      max-width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .profiles{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profiles li{
+      margin: 0.25em 0 0;
+      list-style-type: none;
+    }
+
+    /* ---------- Code blocks (your existing styles) ---------- */
+    pre, pre.chroma{
+      padding: 1em;
+      background-color: #F5F5F5;
+      border: 1px solid #E5E5E5;
+      overflow: auto;
+      text-align: left;
+    }
+
+    /* Chroma minimal (keep your long chroma rules if needed) */
+    .chroma { background-color: #ffffff; }
+
+    /* ---------- Small screens ---------- */
+    @media (max-width: 690px){
+      body{ font-size: 1.1rem; }
+      .hero{ gap: 12px; }
+      figure.portrait img{ max-width: 160px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="site-header">
+      <nav id="menu" aria-label="Primary navigation">
+        <ul>
+          <li><span><i class="fa-svg fa-home" aria-hidden="true"></i></span><a href="/">Home</a></li>
+          <li><span><i class="fa-svg fa-book" aria-hidden="true"></i></span><a href="cpp.html">C/C++</a></li>
+          <li><span><i class="fa-svg fa-pencil-alt" aria-hidden="true"></i></span><a href="/blog/">System Design</a></li>
+          <li><span><i class="fa-svg fa-comments" aria-hidden="true"></i></span><a href="/talks/">Machine Learning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h1 class="title">Roozbeh Sanaei</h1>
+
+        <section class="hero">
+          <figure class="portrait">
+            <picture>
+              <source srcset="https://i.ibb.co/xK65Hp7N/RZB1.jpg" type="image/jpeg">
+              <img src="https://i.ibb.co/xK65Hp7N/RZB1.jpg" alt="Roozbeh Sanaei portrait" loading="lazy">
+            </picture>
+          </figure>
+
+          <div>
+            <ul class="profiles">
+              <li><a href="https://www.linkedin.com/in/roozbeh-sanaei/">Roozbeh Sanaei @ LinkedIn</a></li>
+              <li><a href="https://scholar.google.com/citations?hl=en&user=QIS5MbYAAAAJ">Google Scholar</a></li>
+              <li><a href="https://github.com/RoozbehSanaei">Roozbeh Sanaei @ GitHub</a></li>
+              <li><a href="https://x.com/Roozbeh_Sanaei2">Roozbeh Sanaei @ X</a></li>
+              <li><a href="https://www.youtube.com/c/RoozbehSanaei">Roozbeh Sanaei @ YouTube</a></li>
+            </ul>
+          </div>
+        </section>
 
 
     <p class="lede">
@@ -116,4 +335,15 @@
         clustering-based methods used for modularization and product architecture.
       </p>
     </div>
-  </main>
+
+
+        
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>&nbsp;</div>
+    </footer>
+  </div>
+</body>
+</html>
